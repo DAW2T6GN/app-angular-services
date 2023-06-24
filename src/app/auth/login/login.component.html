@@ -1,1 +1,21 @@
-<p>login works!</p>
+<mat-card>
+    <mat-card-content>
+        <form>
+            <fieldset fxLayout="column">
+                <mat-form-field  appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input matInput #userEmailInput >
+                  </mat-form-field>
+        
+                  <mat-form-field  appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input matInput #userPasswordInput type="password" >
+                  </mat-form-field>   
+                  <button mat-raised-button color="primary"
+                    (click)="onSubmit(userEmailInput, userPasswordInput)">
+                    Ingresar</button>
+            </fieldset>
+        </form>
+    </mat-card-content>
+</mat-card>
+  

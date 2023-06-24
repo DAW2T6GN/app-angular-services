@@ -24,7 +24,7 @@ import { RouterModule } from '@angular/router';
     ProductoListaComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,    
     MaterialModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([

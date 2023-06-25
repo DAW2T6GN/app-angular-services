@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './angular-material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { CursoDetalleComponent } from './dashboard/curso/curso-detalle/curso-detalle.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +23,13 @@ import { RouterModule } from '@angular/router';
     DashboardComponent,
     HomeComponent,
     CursoListaComponent,
-    ProductoListaComponent
+    ProductoListaComponent,
+    CursoDetalleComponent
   ],
   imports: [
     BrowserModule,    
     MaterialModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
@@ -33,6 +37,7 @@ import { RouterModule } from '@angular/router';
         children: [
           {path: 'home', component: HomeComponent},
           {path: 'curso', component: CursoListaComponent},
+          {path: 'curso/:id', component: CursoDetalleComponent},
           {path: 'producto', component: ProductoListaComponent}
         ]
       },
